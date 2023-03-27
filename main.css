@@ -1,0 +1,15 @@
+#gameboard {
+
+    width: 100%;
+
+}
+
+.square{
+
+    height: 115px;
+    width: 115px;
+
+}
+.title{
+    text-align: center;
+}

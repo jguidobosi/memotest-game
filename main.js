@@ -13,10 +13,6 @@ let possibilities =
 
 possibilitiesDuplicate = possibilities.concat(possibilities);
 
-
-
-
-
 $gameboard.onclick = function (e) {
     console.log("Clases: " + e.target.className);
 }
@@ -40,7 +36,9 @@ function shuffle() {
     $gameSquares.forEach(function (value, i) {
         value.classList.add(possibilitiesDuplicate[i].class);
         value.src = possibilitiesDuplicate[i].src;
+        console.log(value.className);
     });
+
 
 
 }

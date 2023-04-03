@@ -1,16 +1,37 @@
 #gameboard {
 
     width: 100%;
+    right: 5px;
 
 }
 
-.square,.box{
-
-    height: 115px;
-    width: 115px;
+.square,
+.covering {
+    height: 114px;
+    width: 114px;
+    position: absolute;
+    right: 0%;
+    border-radius: 25px;
+    margin-top: 4px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 4px;
 
 }
-.title{
+.covering {
+    height: 116px;
+    width: 116px; 
+    margin-top: 3px;
+    margin-right: 3px;
+}
+ 
+.box {
+    height: 122px;
+    width: 122px;
+    position: relative;
+}
+
+.title {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;

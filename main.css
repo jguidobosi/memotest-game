@@ -2,6 +2,7 @@
     width: 100%;
     right: 5px;
 }
+
 .square,
 .covering {
     height: 114px;
@@ -14,15 +15,18 @@
     margin-left: 3px;
     margin-right: 4px;
 }
+
 .square {
     opacity: 0%;
     transition: opacity 0.2s;
 }
+
 .box {
     height: 122px;
     width: 122px;
     position: relative;
 }
+
 .title {
     text-align: center;
     font-family: 'Gill Sans', sans-serif;
@@ -30,9 +34,11 @@
     opacity: 50%;
     margin-bottom: 1.5%;
 }
+
 body {
     background-color: AntiqueWhite;
 }
+
 .logo {
     height: 120px;
     display: block;
@@ -41,11 +47,30 @@ body {
     margin-top: 2%;
     opacity: 85%;
 }
+
 .footer {
-    margin-top: 7%;
+    margin-top: 1%;
     text-align: center;
     font-family: 'Gill Sans', sans-serif;
     font-weight: bold;
     opacity: 50%;
 }
 
+.ending {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Gill Sans', sans-serif;
+    font-weight: bold;
+    opacity: 90%;
+    visibility:hidden;
+}
+.end-text{
+    margin-top: 3%;
+}
+.end-button{
+    margin-top: 1%;
+}
+.visible{
+    visibility:visible;
+}

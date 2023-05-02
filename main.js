@@ -1,5 +1,7 @@
-$gameboard = document.querySelector("#gameboard");
-$gameSquares = document.querySelectorAll(".square");
+let $gameboard = document.querySelector("#gameboard");
+let $gameSquares = document.querySelectorAll(".square");
+let $ending = document.querySelectorAll(".ending");
+let $replayButton = document.querySelector(".end-button")
 let possibilities =
     [{ class: "blue", src: "imgs/blue.jpg" },
     { class: "purple", src: "imgs/purple.jpg" },
@@ -50,7 +52,9 @@ function clickHandler(action) {
     }
 }
 function endGame() {
-    console.log("GAME FINISHED")
+    console.log("GAME FINISHED");
+    $ending.forEach((element) => {element.classList.add("visible")});
+    //$replayButton.onclick = 
 }
 function squareOpacity($squares, opacity) {
     $squares.forEach((element) => {

@@ -1,10 +1,7 @@
 #gameboard {
-
     width: 100%;
     right: 5px;
-
 }
-
 .square,
 .covering {
     height: 114px;
@@ -16,23 +13,39 @@
     margin-bottom: 3px;
     margin-left: 3px;
     margin-right: 4px;
-
 }
-.covering {
-    height: 116px;
-    width: 116px; 
-    margin-top: 3px;
-    margin-right: 3px;
+.square {
+    opacity: 0%;
+    transition: opacity 0.2s;
 }
- 
 .box {
     height: 122px;
     width: 122px;
     position: relative;
 }
-
 .title {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-family: 'Gill Sans', sans-serif;
+    font-weight: bold;
+    opacity: 50%;
+    margin-bottom: 1.5%;
 }
+body {
+    background-color: AntiqueWhite;
+}
+.logo {
+    height: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    opacity: 85%;
+}
+.footer {
+    margin-top: 7%;
+    text-align: center;
+    font-family: 'Gill Sans', sans-serif;
+    font-weight: bold;
+    opacity: 50%;
+}
+

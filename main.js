@@ -2,6 +2,7 @@ let $gameboard = document.querySelector("#gameboard");
 let $gameSquares = document.querySelectorAll(".square");
 let $ending = document.querySelectorAll(".ending");
 let $replayButton = document.querySelector(".end-button")
+let $endingText = document.querySelector(".end-text")
 let possibilities =
     [{ class: "blue", src: "imgs/blue.jpg" },
     { class: "purple", src: "imgs/purple.jpg" },
@@ -14,57 +15,67 @@ let possibilities =
 possibilitiesDuplicate = possibilities.concat(possibilities);
 let clickCounter = 0;
 let foundCount = 0;
-let attemptsCounts = 0;
+let scoreCounter = 0;
 let $selectedSquares = [];
 function clickHandler(action) {
     if (action) {
         $gameboard.onclick = function (e) {
-            console.log(e.target, clickCounter);
+            console.log("Unlocked");
             if (e.target.classList.contains("available")) {
                 clickHandler(false);
                 squareOpacity([e.target], "100");
                 $selectedSquares.push(e.target);
-                console.log(clickCounter);
                 if ($selectedSquares.length > 1) {
+                    scoreCounter++;
                     clickCounter = 0;
-                    console.log("PAR: " + $selectedSquares[0].classList + $selectedSquares[1].classList);
                     if ($selectedSquares[0].className === $selectedSquares[1].className) {
                         lock($selectedSquares);
                         foundCount++;
-                        attemptsCounts++;
-                        console.log("PUNTUACION:" + attemptsCounts);
                         if (foundCount === 8) {
                             endGame();
                         }
                     } else {
-                        setTimeout(squareOpacity, 0.5 * 1000, $selectedSquares, "0");
-                    }
+                        setTimeout(squareOpacity, 0.5 * 1000, $selectedSquares, "0");                    }
                     $selectedSquares = [];
                 }
                 setTimeout(clickHandler, 0.3 * 1000, true);
             }
         }
     } else {
-        console.log("LOCKED");
         $gameboard.onclick = function (e) {
             console.log("Blocked");
         }
     }
 }
 function endGame() {
-    console.log("GAME FINISHED");
+    foundCount = 0;
     $ending.forEach((element) => {element.classList.add("visible")});
-    //$replayButton.onclick = 
+    $endingText.textContent = `¡BIEN HECHO PIRATA! Solo te tomó ${scoreCounter.toString()} cañonazos.`
+    $replayButton.onclick = function(){
+        restartGame();
+    }
+}
+function restartGame() {
+    scoreCounter = 0;
+    squareOpacity($gameSquares,0);
+    shuffle();
+    clickHandler(true);
+    $ending.forEach((element) => {element.classList.remove("visible")});
+    unlock($gameSquares)
 }
 function squareOpacity($squares, opacity) {
     $squares.forEach((element) => {
-        console.log("opacidad: " + opacity + element.classList);
         element.style.opacity = opacity;
     });
 }
 function lock($squares) {
     $squares.forEach((element) => {
         element.classList.remove("available");
+    })
+}
+function unlock($squares) {
+    $squares.forEach((element) => {
+        element.classList.add("available");
     });
 }
 function shuffle() {
@@ -86,14 +97,3 @@ function shuffle() {
 }
 shuffle();
 clickHandler(true);
-/*
-TABLERO ON CLICK(E)
-
-
-
-
-
-
-
-
-*/

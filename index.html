@@ -7,72 +7,97 @@
 
     <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css">
     <link rel="stylesheet" href="main.css">
-    <h1 class ="title">Matching Game</h1>
+    <img class="logo" src="imgs/OP_Logo.png">
+    <h4 class="title">MATCHING GAME</h1>
 
 </head>
 
 <body>
     <div id="gameboard" class="container-sm ">
-        <div class="row justify-content-center">
-            <div class="col-3 square blue">
-                <img class="square" src="imgs/blue.jpg">
+        <div class="row justify-content-center ">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/1.jpg">
+                <img class="square blue available" src="imgs/blue.jpg">
             </div>
-            <div class="col-3 square red">
-                <img  class="square" src="imgs/red.jpg">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/2.jpg">
+                <img class="square red available" src="imgs/red.jpg">
             </div>
-            <div class="col-3 square green">
-                <img class="square" src="imgs/green.jpg">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/3.jpg">
+                <img class="square green available" src="imgs/green.jpg">
             </div>
-            <div class="col-3 square yellow">
-                <img class="square" src="imgs/yellow.jpg">
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-3 square light-blue">
-                <img class="square" src="imgs/light-blue.jpg">
-            </div>
-            <div class="col-3 square orange">
-                <img class="square" src="imgs/orange.jpg">
-            </div>
-            <div class="col-3 square blue">
-                <img class="square" src="imgs/blue.jpg">
-            </div>
-            <div class="col-3 square red">
-                <img class="square" src="imgs/red.jpg">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/4.jpg">
+                <img class="square yellow available" src="imgs/yellow.jpg">
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-3 square green">
-                <img class="square" src="imgs/green.jpg">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/5.jpg">
+                <img class="square light-blue available" src="imgs/light-blue.jpg">
             </div>
-            <div class="col-3 square yellow">
-                <img class="square" src="imgs/yellow.jpg">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/6.jpg">
+                <img class="square orange available" src="imgs/orange.jpg">
             </div>
-            <div class="col-3 square light-blue">
-                <img class="square" src="imgs/light-blue.jpg">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/7.jpg">
+                <img class="square blue available" src="imgs/blue.jpg">
             </div>
-            <div class="col-3 square red">
-                <img class="square" src="imgs/orange.jpg">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/8.jpg">
+                <img class="square red available" src="imgs/red.jpg">
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-3 square pink">
-                <img class="square" src="imgs/pink.jpg">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/9.jpg">
+                <img class="square green available" src="imgs/green.jpg">
             </div>
-            <div class="col-3 square brown">
-                <img class="square" src="imgs/brown.jpg">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/10.jpg">
+                <img class="square yellow available" src="imgs/yellow.jpg">
             </div>
-            <div class="col-3 square pink">
-                <img class="square" src="imgs/pink.jpg">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/11.jpg">
+                <img class="square light-blue available" src="imgs/light-blue.jpg">
             </div>
-            <div class="col-3 square brown">
-                <img class="square" src="imgs/brown.jpg">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/12.jpg">
+                <img class="square red available" src="imgs/orange.jpg">
             </div>
         </div>
-
+        <div class="row justify-content-center">
+            <div class="col-3 box">
+                <img class="covering" src="imgs/13.jpg">
+                <img class="square pink available" src="imgs/pink.jpg">
+            </div>
+            <div class="col-3 box">
+                <img class="covering" src="imgs/14.jpg">
+                <img class="square purple available" src="imgs/purple.jpg">
+            </div>
+            <div class="col-3 box">
+                <img class="covering" src="imgs/15.jpg">
+                <img class="square pink available" src="imgs/pink.jpg">
+            </div>
+            <div class="col-3 box">
+                <img class="covering" src="imgs/16.jpg">
+                <img class="square purple available" src="imgs/purple.jpg">
+            </div>
+        </div>
     </div>
     </div>
 
+    <div class="container ending">
+        <div class="end-text ending">¡GANASTE!</div>
+        <div class="vertical-center">
+            <button class="end-button btn btn-warning">Play Again</button>
+        </div>
+    </div>
+    <footer>
+        <p class="footer">R/ArgentinaPrograma</p>
+    </footer>
     <script src='main.js'></script>
 </body>
 

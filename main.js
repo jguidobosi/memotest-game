@@ -50,7 +50,7 @@ function clickHandler(action) {
 function endGame() {
     foundCount = 0;
     $ending.forEach((element) => {element.classList.add("visible")});
-    $endingText.textContent = `¡BIEN HECHO PIRATA! Solo te tomó ${scoreCounter.toString()} cañonazos.`
+    $endingText.textContent = `GOOD JOB PIRATE! Took you ${scoreCounter.toString()} shots.`
     $replayButton.onclick = function(){
         restartGame();
     }
